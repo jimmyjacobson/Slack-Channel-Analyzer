@@ -22,10 +22,11 @@ program
 const options = program.opts();
 
 // Validate Slack token format
-if (!options.token.startsWith('xoxb-')) {
-  console.error('❌ Invalid Slack token format. Bot tokens should start with "xoxb-"');
-  console.error('   Please provide a valid Slack Bot User OAuth Token.');
-  console.error('   Get one at: https://api.slack.com/apps → Your App → OAuth & Permissions');
+if (!options.token.startsWith('xoxb-') && !options.token.startsWith('xoxp-')) {
+  console.error('❌ Invalid Slack token format.');
+  console.error('   Accepted token types:');
+  console.error('   - Bot Token (starts with "xoxb-"): Get from https://api.slack.com/apps');
+  console.error('   - User Token (starts with "xoxp-"): Get from your Slack app user settings');
   process.exit(1);
 }
 

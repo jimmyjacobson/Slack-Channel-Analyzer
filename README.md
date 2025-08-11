@@ -1,6 +1,6 @@
 # Slack Conversation Analyzer
 
-A Node.js command-line script that analyzes Slack channel conversations using AI. The script ingests messages from a specified Slack channel since a given datetime and processes them with a custom prompt using OpenAI's GPT-4o model.
+A Node.js command-line script for **one-time analysis** of Slack channel conversations using AI. This is not a bot - it's a standalone script that runs once, fetches messages from a specified Slack channel since a given datetime, analyzes them with OpenAI's GPT-4o model using your custom prompt, and exits.
 
 ## Features
 
@@ -17,21 +17,29 @@ A Node.js command-line script that analyzes Slack channel conversations using AI
 Before using this script, ensure you have:
 
 1. **Node.js** (v14 or higher)
-2. **Slack Bot Token** (starts with `xoxb-`) with appropriate permissions:
-   - `channels:history` - Read messages from public channels
-   - `groups:history` - Read messages from private channels (if needed)
-   - `users:read` - Read user information for username resolution
-   - `conversations.history` - Access conversation history
+2. **Slack Authentication Token** with appropriate permissions:
+   - **Option A: Bot Token** (starts with `xoxb-`) - Recommended for team use
+   - **Option B: User Token** (starts with `xoxp-`) - For personal use
 3. **OpenAI API Key** for AI processing
 
-### Getting a Slack Bot Token
+### Getting a Slack Token
 
+**Option A: Bot Token (Recommended)**
 1. Go to https://api.slack.com/apps
 2. Create a new app or select an existing one
 3. Navigate to "OAuth & Permissions" in the sidebar
-4. Under "Bot Token Scopes", add the required permissions listed above
+4. Under "Bot Token Scopes", add these permissions:
+   - `channels:history` - Read messages from public channels
+   - `groups:history` - Read messages from private channels (if needed)
+   - `users:read` - Read user information for username resolution
 5. Install the app to your workspace
 6. Copy the "Bot User OAuth Token" (starts with `xoxb-`)
+
+**Option B: User Token (Personal Use)**
+1. Go to https://api.slack.com/apps
+2. Create a new app for your workspace
+3. Under "User Token Scopes", add the same permissions as above
+4. Install the app and copy the "User OAuth Token" (starts with `xoxp-`)
 
 ### Required Dependencies
 
