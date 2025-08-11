@@ -21,8 +21,14 @@ program
 
 const options = program.opts();
 
-// Note: Temporarily allowing non-standard token formats for testing
-console.log('🔐 Using provided authentication token...');
+// Validate Slack token format
+if (!options.token.startsWith('xoxb-') && !options.token.startsWith('xoxp-')) {
+  console.error('❌ Invalid Slack token format.');
+  console.error('   Accepted token types:');
+  console.error('   - Bot Token (starts with "xoxb-"): Get from https://api.slack.com/apps');
+  console.error('   - User Token (starts with "xoxp-"): Get from your Slack app user settings');
+  process.exit(1);
+}
 
 // Initialize Slack client
 const slack = new WebClient(options.token);
