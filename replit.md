@@ -6,7 +6,13 @@ A Node.js command-line tool that analyzes Slack channel conversations using AI. 
 
 ## User Preferences
 
-Preferred communication style: Simple, everyday language.
+- **Communication style**: Simple, everyday language
+- **Documentation**: Include beginner-friendly setup instructions for users unfamiliar with running scripts
+
+## Recent Changes
+
+- **August 12, 2025**: Successfully completed and tested full Slack conversation analyzer with working authentication, permissions, and AI integration
+- **August 12, 2025**: Enhanced README with comprehensive installation guide including Node.js setup, dependency installation, API key configuration, and troubleshooting section for beginners
 
 ## System Architecture
 
