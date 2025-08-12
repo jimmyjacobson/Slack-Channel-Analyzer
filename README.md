@@ -194,7 +194,7 @@ node slack-analyzer.js -c "#general" -d "1 day ago" -p "Summarize today's discus
 
 When the script runs successfully, you'll see output like this:
 
-![Sample Output](attached_assets/Screenshot%202025-08-12%20at%2010.20.11%20AM_1755021237374.png)
+![Sample Output](attached_assets/screenshot.png)
 
 The script provides detailed analysis including:
 - General team atmosphere and collaboration patterns
