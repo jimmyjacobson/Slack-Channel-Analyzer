@@ -194,33 +194,15 @@ node slack-analyzer.js -c "#general" -d "1 day ago" -p "Summarize today's discus
 
 When the script runs successfully, you'll see output like this:
 
-```
-🚀 Starting Slack conversation analysis...
+![Sample Output](attached_assets/Screenshot%202025-08-12%20at%2010.20.11%20AM_1755021237374.png)
 
-📅 Parsing datetime...
-   Fetching messages since: 2025-08-10 23:01:13
-
-🔍 Resolving channel...
-   Channel ID: CAH2JGAAF
-
-👥 Fetching user information...
-   Loaded 291 users
-
-💬 Fetching channel messages...
-   Retrieved 1 messages
-
-📝 Formatting conversation data...
-   Formatted 1668 characters of conversation data
-
-🤖 Analyzing conversation with AI...
-✅ Analysis complete!
-
-================================================================================
-AI ANALYSIS RESULT
-================================================================================
-[Your custom AI analysis will appear here based on your prompt]
-================================================================================
-```
+The script provides detailed analysis including:
+- General team atmosphere and collaboration patterns
+- Technical engagement and knowledge sharing
+- Team humor and camaraderie indicators  
+- Problem-solving culture and support systems
+- Learning mindset and technology adoption
+- Overall morale and motivation levels
 
 ## Command Line Options
 
@@ -231,3 +213,13 @@ AI ANALYSIS RESULT
 - `--openai-key <key>` - OpenAI API key (optional if set as environment variable)
 - `-h, --help` - Show help information
 - `-V, --version` - Show version number
+
+## About
+
+This Slack Conversation Analyzer was created to help teams gain insights into their communication patterns and team dynamics using AI analysis.
+
+**Created by:** Jimmy Jacobson  
+**Website:** [www.codingscape.com](https://www.codingscape.com)  
+**LinkedIn:** [linkedin.com/in/jimmyjacobson](https://www.linkedin.com/in/jimmyjacobson/)
+
+For questions, feedback, or collaboration opportunities, feel free to reach out through any of the above channels.
